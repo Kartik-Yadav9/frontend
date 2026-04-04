@@ -1,0 +1,23 @@
+.heading{
+    font-size: 40px;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+}
+
+.container{
+    /* background-color: black;
+    color: white; */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  text-decoration-color: rgb(122, 121, 121);
+}
+
+.ul{
+    font-size: 40px;
+}
