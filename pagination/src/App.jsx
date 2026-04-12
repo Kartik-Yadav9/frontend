@@ -25,6 +25,19 @@ function App() {
     extractData();
   }, []);
 
+
+  const prevBtn=()=>{
+    setCurrentPage((prev) => Math.max(prev - 1, 1));
+  }
+
+  const handleNext=()=>{
+    setCurrentPage((prev)=>Math.min(prev+1, totalPages))
+  }
+
+  const handlePageClick=(pageNumber)=>{
+    setCurrentPage(pageNumber)
+  };
+
   return (
     <div className=" max-w-screen  flex flex-col items-center pb-20">
       <p className=" font-semibold text-4xl mx-auto px-25  text-center py-4">
@@ -51,9 +64,32 @@ function App() {
           })}
         </tbody>
       </table>
-      <div className="flex max-w-full justify-between items-center mt-3">
-        <button className="w-[150px] bg-green-400 p-4 rounded-2xl">Prev</button>
-        <button className="w-[150px] bg-green-400 p-4 rounded-2xl">Next</button>
+      <div className="flex max-w-full gap-5 items-center mt-3">
+        <button
+          className="w-[150px] bg-green-400 p-4 rounded-2xl"
+          onClick={prevBtn}
+          disabled={currentPage === 1}
+        >
+          Prev
+        </button>
+        {Array.from({ length: totalPages }, (_, index) => {
+          return (
+            <button
+              key={index}
+              className={`w-7 p-2 ${currentPage === index+1 ? "bg-slate-400" : "bg-green-400"}`}
+              onClick={() => handlePageClick(index + 1)}
+            >
+              {index + 1}
+            </button>
+          );
+        })}
+        <button
+          className="w-[150px] bg-green-400 p-2 rounded-2xl"
+          onClick={handleNext}
+          disabled={currentPage === totalPages}
+        >
+          Next
+        </button>
       </div>
     </div>
   );
