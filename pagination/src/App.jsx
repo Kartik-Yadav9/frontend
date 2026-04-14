@@ -66,7 +66,7 @@ function App() {
       </table>
       <div className="flex max-w-full gap-5 items-center mt-3">
         <button
-          className="w-[150px] bg-green-400 p-4 rounded-2xl"
+          className="w-[150px] bg-green-400 p-4 rounded-2xl disabled:bg-gray-400 disabled:cursor-not-allowed"
           onClick={prevBtn}
           disabled={currentPage === 1}
         >
@@ -76,7 +76,9 @@ function App() {
           return (
             <button
               key={index}
-              className={`w-7 p-2 ${currentPage === index+1 ? "bg-slate-400" : "bg-green-400"}`}
+              className={`w-7 p-2 ${
+                currentPage === index + 1 ? "bg-blue-500" : "bg-green-400"
+              }`}
               onClick={() => handlePageClick(index + 1)}
             >
               {index + 1}
@@ -84,7 +86,7 @@ function App() {
           );
         })}
         <button
-          className="w-[150px] bg-green-400 p-2 rounded-2xl"
+          className="w-[150px] bg-green-400 p-2 rounded-2xl disabled:bg-gray-400 disabled:cursor-not-allowed"
           onClick={handleNext}
           disabled={currentPage === totalPages}
         >
