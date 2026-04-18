@@ -1,34 +1,18 @@
-import { useState } from "react";
-import "./App.css";
-import { addtask } from "./features/task/TaskSlice";
-import { useDispatch } from "react-redux";
-import TaskList from "./TaskList";
-
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Task from './Task'
+import Home from './Home'
 
 function App() {
-  const [todo, setTodo] = useState("");
-
-  let dispatch = useDispatch();
-
-  let handleAdd = (e) => {
-    e.preventDefault();
-    dispatch(addtask(todo));
-    setTodo("");
-  };
   return (
-    <div className="container">
-      <p className="heading">Task Manager (redux-toolkit)</p>
-      <form onSubmit={handleAdd}>
-        <input
-          onChange={(e) => setTodo(e.target.value)}
-          value={todo}
-          placeholder="write a task"
-        />
-        <button type="submit">add</button>
-      </form>
-      <TaskList/>
-    </div>
-  );
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/Task' element={<Task/>}/>
+    </Routes>
+    
+    
+  )
 }
 
-export default App;
+export default App
+
