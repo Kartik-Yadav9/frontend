@@ -1,0 +1,10 @@
+.lazyGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    gap: 15px;
+    
+}

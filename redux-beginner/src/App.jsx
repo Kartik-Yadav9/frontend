@@ -1,44 +1,25 @@
-import { useDispatch, useSelector } from "react-redux";
-import "./App.css";
-import { decrement, incByAmnt, increment, reset } from "./features/counter/CounterSlice";
-import { useState } from "react";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./ui/Navbar.jsx";
+import Home from "./ui/Home.jsx";
+
+// Regular imports (not lazy loaded)
+import Counter from "./features/counter/Counter";
+import Timer from "./timer/Timer";
+import ReactLazy from "./code-split/ReactLazy.jsx";
 
 function App() {
-  let [increase, setIncrease] = useState(0);
-  let count = useSelector((state) => state.counterr.valuess);
-  let dispatch = useDispatch();
-
-  const handleIncrease = () => {
-    dispatch(increment());
-  };
-
-  const handleDecrease = () => {
-    dispatch(decrement());
-  };
-
-  const handleReset = () => {
-    dispatch(reset());
-  };
-
-  const incByAmount = () => {
-    dispatch(incByAmnt(increase)); //increase is the payload
-  };
-
   return (
-    <>
-      <div>
-        <button onClick={handleIncrease}>increment</button>
-        <p>Count: {count}</p>
-        <button onClick={handleDecrease}>decrement</button>
-        <button onClick={handleReset}>reset</button>
-        <input
-          type="number"
-          value={increase}
-          onChange={(e) => setIncrease(e.target.value)}
-        />
-        <button onClick={incByAmount}>Inc by Amount</button>
-      </div>
-    </>
+    <div>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/react-lazy" element={<ReactLazy />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/timer" element={<Timer />} />
+      </Routes>
+    </div>
   );
 }
 
