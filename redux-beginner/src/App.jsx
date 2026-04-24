@@ -7,6 +7,7 @@ import Home from "./ui/Home.jsx";
 import Counter from "./features/counter/Counter";
 import Timer from "./timer/Timer";
 import ReactLazy from "./code-split/ReactLazy.jsx";
+import DebounceThrottle from "./debounce-throttle/DebounceThrottle.jsx"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/react-lazy" element={<ReactLazy />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/timer" element={<Timer />} />
+        <Route path="/debounce-throttle" element={<DebounceThrottle/>}/>
       </Routes>
     </div>
   );

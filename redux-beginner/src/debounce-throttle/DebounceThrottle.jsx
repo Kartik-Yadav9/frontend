@@ -1,5 +1,5 @@
 import axios from "axios";
-import "./LazyLoad.css"
+import "./DebounceThrottle.css";
 import React, { useEffect, useState } from "react";
 
 function LazyLoad() {
@@ -20,7 +20,7 @@ function LazyLoad() {
   }, []);
   return (
     <div>
-      <p>LazyLoad</p>
+      <p>debounce-throttle</p>
       <div className="lazyGrid">
         {getData.map((i, index) => {
           return (
