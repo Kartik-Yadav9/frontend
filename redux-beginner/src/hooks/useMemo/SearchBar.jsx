@@ -20,7 +20,7 @@ function SearchBar() {
   //useMemo
   const filteredUser = useMemo(() => {
     return users.filter((item) => (
-      console.log("re-rendered stopped bcoz of memo"),
+      console.log("re-rendered stopped bcoz of memo, only trggers when dependency"),
       
       item.firstName.toLowerCase().includes(search.toLowerCase()) //before writing anything in search(onchange),
     )); //-----------------------------------------------------------includes will be true that's why it shows all data

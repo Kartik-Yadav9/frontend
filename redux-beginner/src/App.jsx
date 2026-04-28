@@ -10,14 +10,14 @@ import ReactLazy from "./code-split/ReactLazy.jsx";
 import DebounceThrottle from "./debounce-throttle/DebounceThrottle.jsx"
 import ReactMemo from "./hooks/ReactMemo.jsx";
 import SearchBar from "./hooks/useMemo/SearchBar.jsx";
-import CounterParent from "./hooks/useMemo/CounterParent.jsx";
+import Counterr from "./hooks/useMemo/Counterr.jsx";
 
 function App() {
   return (
     <div>
       {/* <Navbar /> */}
       {/* <ReactMemo/> */}
-      <CounterParent/>
+      <Counterr/>
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/react-lazy" element={<ReactLazy />} />
