@@ -7,7 +7,7 @@ function ProductCard({ product, addToCart }) {
     <div style={{ border: "1px solid gray", margin: "10px", padding: "10px" }}>
       <h4>{product.title}</h4>
 
-      <button onClick={addToCart}>Add To Cart</button>
+      <button onClick={()=>addToCart(product.id)}>Add To Cart</button>
     </div>
   );
 }

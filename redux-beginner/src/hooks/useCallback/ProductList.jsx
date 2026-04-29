@@ -19,8 +19,10 @@ function ProductList() {
   }, []);
 
   // memoized function
-  const addToCart = useCallback(() => {
+  const addToCart = useCallback((id) => {
     setCartCount((prev) => prev + 1);
+    console.log("product id:", id);
+    
   }, []);
 
   return (
@@ -29,7 +31,7 @@ function ProductList() {
       <h3>Cart: {cartCount}</h3>
 
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} addToCart={addToCart} />
+        <ProductCard key={product.id} product={product} addToCart={addToCart}/>
       ))}
     </div>
   );

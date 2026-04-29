@@ -13,6 +13,7 @@ import SearchBar from "./hooks/useMemo/SearchBar.jsx";
 import Counterr from "./hooks/useMemo/Counterr.jsx";
 import UseCallback from "./hooks/useCallback/UseCallback.jsx";
 import ProductList from "./hooks/useCallback/ProductList.jsx";
+import InputExample from "./hooks/useRef/InputExample.jsx";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
       {/* <ReactMemo/> */}
       {/* <Counterr/> */}
       {/* <UseCallback/> */}
-      <ProductList/>
+      {/* <ProductList/> */}
+      <InputExample/>
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/react-lazy" element={<ReactLazy />} />
