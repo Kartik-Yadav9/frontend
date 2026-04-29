@@ -13,8 +13,8 @@ function ReactMemo() {
       >
         increase
       </button>
-      <ChildMemo name="kartik" />
-      {/* <ChildMemo name={count} /> */}
+      {/* <ChildMemo name="kartik" /> */}
+      <ChildMemo name={count} />
       {/* this comment code tell that prop value is changing so it will re-render */}
     </div>
   );

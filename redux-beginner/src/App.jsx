@@ -8,16 +8,20 @@ import Counter from "./features/counter/Counter";
 import Timer from "./timer/Timer";
 import ReactLazy from "./code-split/ReactLazy.jsx";
 import DebounceThrottle from "./debounce-throttle/DebounceThrottle.jsx"
-import ReactMemo from "./hooks/ReactMemo.jsx";
+import ReactMemo from "./hooks/reactMemo/ReactMemo.jsx"
 import SearchBar from "./hooks/useMemo/SearchBar.jsx";
 import Counterr from "./hooks/useMemo/Counterr.jsx";
+import UseCallback from "./hooks/useCallback/UseCallback.jsx";
+import ProductList from "./hooks/useCallback/ProductList.jsx";
 
 function App() {
   return (
     <div>
       {/* <Navbar /> */}
       {/* <ReactMemo/> */}
-      <Counterr/>
+      {/* <Counterr/> */}
+      {/* <UseCallback/> */}
+      <ProductList/>
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/react-lazy" element={<ReactLazy />} />
