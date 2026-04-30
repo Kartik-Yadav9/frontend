@@ -1,0 +1,24 @@
+src
+ ├── context
+ │     ├── auth
+ │     │     ├── AuthContext.js
+ │     │     ├── AuthProvider.js
+ │     │     └── useAuth.js
+ │     │
+ │     ├── cart
+ │     │     ├── CartContext.js
+ │     │     ├── CartProvider.js
+ │     │     └── useCart.js
+ │
+ ├── components
+ │     ├── Navbar.jsx
+ │     ├── ProductCard.jsx
+ │
+ ├── pages
+ │     ├── Home.jsx
+ │     ├── Login.jsx
+ │
+ ├── providers
+ │     └── AppProviders.jsx
+ │
+ └── App.jsx

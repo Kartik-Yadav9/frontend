@@ -14,6 +14,9 @@ import Counterr from "./hooks/useMemo/Counterr.jsx";
 import UseCallback from "./hooks/useCallback/UseCallback.jsx";
 import ProductList from "./hooks/useCallback/ProductList.jsx";
 import InputExample from "./hooks/useRef/InputExample.jsx";
+import Parent from "./hooks/context-api/Parent.jsx";
+import  CounterProvider  from "./hooks/context-apii/CounterProvider.jsx"
+import CounterParent from "./hooks/context-apii/CounterParent.jsx";
 
 function App() {
   return (
@@ -23,7 +26,10 @@ function App() {
       {/* <Counterr/> */}
       {/* <UseCallback/> */}
       {/* <ProductList/> */}
-      <InputExample/>
+      {/* <InputExample/> */}
+      <CounterProvider>
+        <CounterParent/>
+      </CounterProvider>
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/react-lazy" element={<ReactLazy />} />

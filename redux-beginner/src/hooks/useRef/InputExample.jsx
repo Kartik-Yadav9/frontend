@@ -1,26 +1,21 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState } from "react";
 
 function InputExample() {
-    const [data, setData]= useState("")
-    let input1Ref= useRef()
-    let input2Ref = useRef();
+  const [data, setData] = useState("");
+  let input1Ref = useRef();
+  let input2Ref = useRef();
 
+  let handleclick1 = () => {
+    console.log("hii");
+    console.log(input1Ref.current);
+    input1Ref.current.style.width = "300px";
+  };
 
-    let handleclick1=()=>{
-        console.log("hii");
-        console.log(input1Ref.current);
-        input1Ref.current.style.width= "300px"
-        
-
-        
-        
-    }
-
-     let handleclick2 = () => {
-       console.log("bye");
-       input2Ref.current.style.width = "300px";
-       input2Ref.current.focus();
-     };
+  let handleclick2 = () => {
+    console.log("bye");
+    input2Ref.current.style.width = "300px";
+    input2Ref.current.focus();
+  };
   return (
     <div className="flex flex-col  gap-2.5 ">
       <div>
@@ -63,4 +58,4 @@ function InputExample() {
   );
 }
 
-export default InputExample
+export default InputExample;
